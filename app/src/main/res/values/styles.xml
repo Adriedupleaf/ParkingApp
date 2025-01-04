@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonText" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+
+    <style name="OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="endIconTint">@color/primary</item>
+    </style>
+    <style name="CustomMessageDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.Custom.Dialog.Rounded</item>
+        <item name="android:windowBackground">@color/sectionBackground</item>
+        <item name="android:background">@color/secondary</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.Custom.Dialog.Rounded" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+    <style name="TextAppearance">
+        <item name="fontFamily">@font/std</item>
+        <item name="android:fontFamily">@font/std</item>
+        <item name="android:textSize">@dimen/font12</item>
+        <item name="android:textColor">@color/subtitle</item>
+    </style>
+    <style name="TextAppearanceBold" parent="TextAppearance">
+        <item name="android:textSize">@dimen/font18</item>
+        <item name="android:textColor">@color/title</item>
+    </style>
+
+    <style name="TextButton" parent="@style/Widget.Material3.Button.TextButton">
+        <item name="android:textSize">@dimen/font12</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/subtitle</item>
+        <item name="iconTint">@color/subtitle</item>
+        <item name="startIconScaleType">fitCenter</item>
+
+
+    </style>
+</resources>

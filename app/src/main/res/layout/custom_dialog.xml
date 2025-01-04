@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dialog_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/dialog_horizontal_padding"
+        android:paddingVertical="@dimen/dialog_vertical_padding">
+
+        <ImageView
+            android:id="@+id/dialog_top_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dialog_margin_between_elements"
+            android:contentDescription="@string/toDo"
+            android:visibility="gone"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_warning_type1"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/dialog_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/dialog_margin_between_elements"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_top_icon"
+            android:textSize="@dimen/font24"
+            tools:text="titolo" />
+
+        <TextView
+            android:id="@+id/dialog_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_margin_between_elements"
+            android:alpha="0.75"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_title"
+            android:lineSpacingExtra="5dp"
+            tools:text="descrizione descrizione descrizione descrizione descrizione descrizione descrizione descrizione descrizione descrizione "
+            tools:visibility="visible" />
+
+        <!-- CTA solo testuale -->
+        <TextView
+            android:id="@+id/dialog_cta"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_margin_between_elements"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_description"
+            tools:text="descrizione"
+            tools:visibility="visible" />
+
+        <!-- attached file -->
+        <ImageView
+            android:id="@+id/attached_file_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_margin_icon"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/dialog_cta"
+            tools:src="@drawable/ic_warning_type1"
+            tools:visibility="visible"
+            android:contentDescription="@string/toDo" />
+
+        <LinearLayout
+            android:id="@+id/attached_file_lay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_margin_icon"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/attached_file_icon">
+
+            <TextView
+                android:id="@+id/attached_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                tools:text="Allegato:"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/link_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxEms="15"
+                android:visibility="gone"
+                tools:text="Prova"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dialog_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size16"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/attached_file_lay"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            tools:hint="Tag"
+            tools:visibility="visible">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dialog_input_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapWords" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Single Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/single_button"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dialog_margin_between_elements"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_input"
+            tools:text="Annulla" />
+
+        <!-- Double Buttons -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/left_button"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dialog_space_between_buttons"
+            android:layout_marginTop="@dimen/dialog_margin_icon"
+            android:maxWidth="@dimen/size140"
+            android:singleLine="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineV_50"
+            app:layout_constraintTop_toBottomOf="@id/dialog_input"
+            tools:text="Annulla"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/left_button_outlined_small"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size16"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineV_50"
+            app:layout_constraintTop_toBottomOf="@id/dialog_input"
+            tools:text="Annulla" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/center_button"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:maxWidth="@dimen/size140"
+            android:singleLine="false"
+            android:textAppearance="@style/Widget.AppCompat.Button"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_input"
+            tools:text="CENTER" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/right_button"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dialog_space_between_buttons"
+            android:layout_marginTop="@dimen/dialog_margin_icon"
+            android:maxWidth="@dimen/size140"
+            android:singleLine="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Button"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/guidelineV_50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_input"
+            tools:text="OK"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/right_button_small"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size16"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/guidelineV_50"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dialog_input"
+            tools:text="OK" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineV_50"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.50" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

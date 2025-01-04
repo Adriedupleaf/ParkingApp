@@ -1,0 +1,23 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+# Project exclude paths
+/app/src/androidTest/java/com/
+/app/src/androidTest/java/com/example/
+/app/src/androidTest/java/com/example/app3/
+/app/src/test/java/com/
+/app/src/test/java/com/example/
+/app/src/test/java/com/example/app3/

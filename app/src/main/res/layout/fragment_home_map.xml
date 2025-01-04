@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_home_map"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.fragment.app.FragmentContainerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        map:mapId="@string/map_id"
+        android:id="@+id/fragmentContainerView"
+        android:layout_width="match_parent"
+        android:tag="mapFragment"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/location_button"
+        android:layout_width="@dimen/size40"
+        android:layout_height="@dimen/size40"
+        android:layout_marginEnd="@dimen/size20"
+        android:layout_marginBottom="@dimen/size20"
+        android:contentDescription="@string/toDo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/scroll_view"
+        android:backgroundTint="@color/sectionBackground"
+        app:borderWidth="@dimen/size0"
+        android:src="@drawable/ic_location"
+        app:fabSize="mini"
+        app:maxImageSize="15dp"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="@dimen/size28"
+        android:orientation="vertical"
+        >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        tools:listitem="@layout/parking_item"
+        tools:itemCount="4"
+        android:orientation="horizontal"
+        />
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

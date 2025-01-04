@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">ParkingRouteApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="login">Log In</string>
+    <string name="title_data">data</string>
+    <string name="toDo">Example</string>
+    <string name="add">Add</string>
+    <string name="map_id">bd9d0853695c4964</string>
+    <string name="bottomsheet_reserved_label">Reserve Parking at</string>
+    <string name="bottomsheet_price_period_label">for hr</string>
+    <string name="bottomsheet_call_button">Call</string>
+    <string name="bottomsheet_share_button">Share</string>
+    <string name="bottomsheet_directions_button">Directions</string>
+    <string name="bottomsheet_information_title">Info</string>
+    <string name="bottomsheet_information_label">They offer 24/7 access to our parking lot, we know you may need your vechile at any given point of time while offering a 25 % cashback on the base amount if the parking experience ....</string>
+    <string name="bottomsheet_price_title">Price Tariff</string>
+    <string name="bottomsheet_price_information_label">you can change the duration of booking by selecting any one of the options below</string>
+    <string name="bottomsheet_weekdays_title">Weekdays</string>
+    <string name="bottomsheet_weekends_title">Weekends</string>
+    <string name="bottomsheet_spots_availabilitt_label">Available</string>
+
+</resources>

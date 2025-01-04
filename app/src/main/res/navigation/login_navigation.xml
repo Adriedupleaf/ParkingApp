@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/navigation_login">
+    <include app:graph="@navigation/mobile_navigation"/>
+<fragment
+    android:id="@+id/navigation_login"
+    android:name="com.example.app3.ui.login.LoginFragment"
+    android:label="@string/login"
+    tools:layout="@layout/fragment_login" >
+
+</fragment>
+</navigation>
